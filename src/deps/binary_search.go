@@ -1,11 +1,5 @@
 package deps
 
-type ErrString string
-
-func (e ErrString) Error() string {
-	return string(e)
-}
-
 const (
 	NotFoundErr   ErrString = "not found"
 	OutOfRangeErr ErrString = "value out of range"
