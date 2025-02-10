@@ -37,3 +37,30 @@ func GetSlice[T any](nums ...T) []T {
 
 	return res
 }
+
+func GetDigits(num int) []int {
+
+	if num == 0 {
+		return []int{0}
+	}
+
+	v := num
+	var digits []int
+	var tmp int
+	for v != 0 {
+		tmp = v % 10
+		digits = append(digits, tmp)
+		v /= 10
+	}
+
+	return digits
+
+}
+
+func SumSlice(nums []int) int {
+	var sum int
+	for _, num := range nums {
+		sum += num
+	}
+	return sum
+}
