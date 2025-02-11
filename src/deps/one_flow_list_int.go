@@ -39,11 +39,12 @@ func GetList(nums ...int) *ListNode {
 }
 
 func (i *ListNode) String() string {
+
 	sb := strings.Builder{}
 	sb.WriteString("[")
 	head := i
-	sb.WriteString(fmt.Sprint(head.Val))
 	for head != nil {
+		sb.WriteString(fmt.Sprint(head.Val))
 		if head.Next != nil {
 			sb.WriteString(",")
 		}
